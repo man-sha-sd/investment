@@ -31,8 +31,9 @@ def login_required(f):
     def decorated_function(*args, **kwargs):
         if session.get("user_id") is None:
             return redirect("/login")
-        return decorated_function
         return f(*args, **kwargs)
+
+    return decorated_function
 
 
 def lookup(symbol):
