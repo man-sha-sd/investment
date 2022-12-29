@@ -2,3 +2,4 @@
 .idea
 flask_session
 __pycache__
+finance.db
